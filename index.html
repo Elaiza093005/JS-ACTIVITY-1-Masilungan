@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Toggle</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      background: #e6f2ff; /* light blue */
+      color: #222;
+      text-align: center;
+      padding: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark {
+      background: #222;
+      color: #f1f1f1;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #3399ff;
+      color: white;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #1a75d1;
+    }
+    .dark button {
+      background-color: #666;
+    }
+    .dark button:hover {
+      background-color: #444;
+    }
+    .centered-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 150px; /* mas maliit na size */
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi, I'm Elaiza!</h1>
+
+  <img src="aiza.jfif" alt="Sample Pic" class="centered-img">
+
+  <button id="toggleBtn">Switch</button>
+
+  <script>
+    const button = document.getElementById('toggleBtn');
+    const body = document.body;
+
+    button.addEventListener('click', function() {
+      body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
